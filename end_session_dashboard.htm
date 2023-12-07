@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>End Session Dashboard</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: teal;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 5px;
+  font-size: 14px;
+  width: 100px;
+}
+
+.tablink:hover {
+  background-color: #7A7A7A;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 0px 0px;
+  height: 100%;
+}
+
+#Assets {background-color: black;}
+#Charts {background-color: black;}
+#Indices {background-color: black;}
+</style>
+</head>
+<body>
+<div style="
+position:absolute;top:5px;right:8px;
+font-family:Calibri;
+background-color:black;
+">
+
+<img src="img/aus.png" width=24px height=18px>
+<iframe src="https://free.timeanddate.com/clock/i4wet8pd/n240/fcfff/tct/pct" frameborder="0" width="83" height="18" allowtransparency="true"></iframe>
+
+<img src="img/jpn.png" width=24px height=18px>
+<iframe src="https://free.timeanddate.com/clock/i4wk4m06/n248/fcfff/tct/pct" frameborder="0" width="83" height="18" allowtransparency="true"></iframe>
+
+<img src="img/eu.gif" width=24px height=18px>
+<iframe src="https://free.timeanddate.com/clock/i4wopbsi/n83/fcfff/tct/pct" frameborder="0" width="83" height="18" allowtransparency="true"></iframe>
+
+<img src="img/uk.png" width=24px height=18px>
+<iframe src="https://free.timeanddate.com/clock/i4wopmzc/n136/fcfff/tct/pct" frameborder="0" width="83" height="18" allowtransparency="true"></iframe>
+
+<img src="img/us.png" width=24px height=18px>
+<iframe src="https://free.timeanddate.com/clock/i4wopmzc/n179/fcfff/tct/pct" frameborder="0" width="83" height="18" allowtransparency="true"></iframe>
+
+</div>
+
+<button class="tablink" onclick="openPage('Assets', this, 'black')"id="defaultOpen">Assets</button>
+<button class="tablink" onclick="openPage('Charts', this, 'black')">Charts</button>
+<button class="tablink" onclick="location.href='https://www.malaysiastock.biz/Market-Watch.aspx?type=C&value=BURSA-INDICES'">Indices</button>
+
+<div id="Assets" class="tabcontent">
+<table style="width: 100%; height: 100%" >
+<tbody>
+<tr>
+    <td>
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+  {
+  "width": "100%",
+  "height": "100%",
+  "symbolsGroups": [
+    {
+      "name": "US",
+      "originalName": "US",
+      "symbols": [
+        {
+          "name": "OANDA:US30USD",
+          "displayName": "YM"
+        },
+        {
+          "name": "OANDA:SPX500USD",
+          "displayName": "ES"
+        },
+        {
+          "name": "OANDA:NAS100USD",
+          "displayName": "NQ"
+        }
+      ]
+    },
+    {
+      "name": "EU",
+      "originalName": "EU",
+      "symbols": [
+        {
+          "name": "OANDA:EU50EUR",
+          "displayName": "ESTX"
+        },
+        {
+          "name": "OANDA:DE30EUR",
+          "displayName": "DAX"
+        },
+        {
+          "name": "OANDA:FR40EUR",
+          "displayName": "CAC"
+        },
+        {
+          "name": "OANDA:UK100GBP",
+          "displayName": "FTSE"
+        }
+      ]
+    },
+    {
+      "name": "APAC",
+      "originalName": "APAC",
+      "symbols": [
+        {
+          "name": "OANDA:AU200AUD",
+          "displayName": "ASX"
+        },
+        {
+          "name": "OANDA:JP225USD",
+          "displayName": "N225"
+        },
+        {
+          "name": "OANDA:CN50USD",
+          "displayName": "SSE"
+        },
+        {
+          "name": "OANDA:HK33HKD",
+          "displayName": "HSI"
+        }
+      ]
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "en",
+  "largeChartUrl": "https://www.tradingview.com/chart/"
+}
+  </script>
+</div>
+    </td>
+
+
+    <td>
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+  {
+  "width": "100%",
+  "height": "100%",
+  "symbolsGroups": [
+    {
+      "name": "Commodities",
+      "originalName": "Commodities",
+      "symbols": [
+        {
+          "name": "CRYPTO:BTCUSD",
+          "displayName": "Bitcoin"
+        },
+        {
+          "name": "TVC:USOIL",
+          "displayName": "WTI CL"
+        },
+        {
+          "name": "OANDA:XAUUSD",
+          "displayName": "GC"
+        },
+        {
+          "name": "CURRENCYCOM:COPPER",
+          "displayName": "HG"
+        }
+      ]
+    },
+    {
+      "name": "Forex",
+      "originalName": "Forex",
+      "symbols": [
+        {
+          "name": "FX:USDOLLAR",
+          "displayName": "USD INDEX"
+        },
+        {
+          "name": "FX:NZDUSD",
+          "displayName": "NZD/USD"
+        },
+        {
+          "name": "FX:AUDUSD",
+          "displayName": "AUD/USD"
+        },
+        {
+          "name": "FX:USDJPY",
+          "displayName": "USD/JPY"
+        },
+        {
+          "name": "FX:EURUSD",
+          "displayName": "EUR/USD"
+        },
+        {
+          "name": "FX:GBPUSD",
+          "displayName": "GBP/USD"
+        },
+        {
+          "name": "FX:USDCHF",
+          "displayName": "USD/CHF"
+        },
+        {
+          "name": "FX:USDCAD",
+          "displayName": "USD/CAD"
+        }
+      ]
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "en",
+  "largeChartUrl": "https://www.tradingview.com/chart/"
+}
+  </script>
+</div>
+    </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="Charts" class="tabcontent">
+	<table style="
+			width:100%;
+			height:100%;
+			border-collapse:collapse;
+			text-align:center;
+			background: #000000;
+			color: #ffffff;
+	">
+		<tbody>
+			<tr>
+				<td style="height:280px;">
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": 
+  "OANDA:US30USD"
+  ,
+  "interval": "D",
+  "timezone": "Asia/Hong_Kong",
+  "theme": "Dark",
+  "style": "0",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "hidevolume": true,
+  "save_image": false,
+  "studies": [
+               {
+                  id: "MASimple@tv-basicstudies",
+                  inputs: {
+                            length: 20
+                          }
+               }
+             ],
+  "hideideas": true
+});
+</script>
+				</td>
+				<td>
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": 
+  "FX:USDOLLAR"
+  ,
+  "interval": "D",
+  "timezone": "Asia/Hong_Kong",
+  "theme": "Dark",
+  "style": "0",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "hidevolume": true,
+  "save_image": false,
+  "studies": [
+               {
+                  id: "MASimple@tv-basicstudies",
+                  inputs: {
+                            length: 20
+                          }
+               }
+             ],
+  "hideideas": true
+});
+</script>
+				</td>
+				<td>
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": 
+  "TVC:USOIL"
+  ,
+  "interval": "D",
+  "timezone": "Asia/Hong_Kong",
+  "theme": "Dark",
+  "style": "0",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "hidevolume": true,
+  "save_image": false,
+  "studies": [
+               {
+                  id: "MASimple@tv-basicstudies",
+                  inputs: {
+                            length: 20
+                          }
+               }
+             ],
+  "hideideas": true
+});
+</script>
+				</td>
+				<td style="width: 20%" valign="top" rowspan="2">
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "dark",
+  "dateRange": "12M",
+  "showChart": false,
+  "locale": "en",
+  "width": "100%",
+  "height": "528",
+  "largeChartUrl": "https://www.tradingview.com/chart/",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "showFloatingTooltip": false,
+  "tabs": [
+    {
+      "title": "Forex",
+      "symbols": [
+        {
+          "s": "FX:USDOLLAR",
+          "d": "USD Index"
+        },
+        {
+          "s": "CRYPTO:BTCUSD",
+          "d": "Bitcoin"
+        },
+        {
+          "s": "TVC:USOIL",
+          "d": "WTI CL"
+        },
+        {
+          "s": "OANDA:XAUUSD",
+          "d": "GC"
+        },
+        {
+          "s": "OANDA:JP225USD",
+          "d": "N225"
+        },
+        {
+          "s": "OANDA:CN50USD",
+          "d": "SSE"
+        },
+        {
+          "s": "OANDA:HK33HKD",
+          "d": "HSI"
+        },
+        {
+          "s": "OANDA:US30USD",
+          "d": "YM"
+        },
+        {
+          "s": "OANDA:NAS100USD",
+          "d": "NQ"
+        },
+        {
+          "s": "OANDA:SPX500USD",
+          "d": "ES"
+        }
+      ],
+      "originalTitle": "Assets"
+    }
+  ]
+}
+  </script>
+</div>
+	<a href="http://www.aastocks.com/sc/stocks/news/hot-topic/34" target="_blank" style="color: white">#港股走势</a>
+	<a href="http://www.aastocks.com/sc/stocks/market/index/hk-index-con.aspx?index=HSI&t=1&s=4&o=0&hk=0" target="_blank" style="color: grey">#指数成份股</a>
+	<br>
+	<a href="https://seekingalpha.com/etfs-and-funds/etf-tables/sectors" target="_blank" style="color: white">ETFs</a>
+	<a href="https://www.briefing.com/stock-market-update/archive" target="_blank" style="color: white">Briefing</a>
+	<a href="https://finance.yahoo.com/news/" target="_blank" style="color: white">Reuters1</a>
+	<a href="https://www.marketscreener.com/news/indexes/" target="_blank" style="color: white">Reuters2</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="height:280px;">
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": 
+  "OANDA:NAS100USD"
+  ,
+  "interval": "D",
+  "timezone": "Asia/Hong_Kong",
+  "theme": "Dark",
+  "style": "0",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "hidevolume": true,
+  "save_image": false,
+  "studies": [
+               {
+                  id: "MASimple@tv-basicstudies",
+                  inputs: {
+                            length: 20
+                          }
+               }
+             ],
+  "hideideas": true
+});
+</script>
+				</td>
+				<td>
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": 
+  "OANDA:XAUUSD"
+  ,
+  "interval": "D",
+  "timezone": "Asia/Hong_Kong",
+  "theme": "Dark",
+  "style": "0",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "hidevolume": true,
+  "save_image": false,
+  "studies": [
+               {
+                  id: "MASimple@tv-basicstudies",
+                  inputs: {
+                            length: 20
+                          }
+               }
+             ],
+  "hideideas": true
+});
+</script>
+
+				</td>
+				<td>
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": 
+  "OANDA:HK33HKD"
+  ,
+  "interval": "D",
+  "timezone": "Asia/Hong_Kong",
+  "theme": "Dark",
+  "style": "0",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "hidevolume": true,
+  "save_image": false,
+  "studies": [
+               {
+                  id: "MASimple@tv-basicstudies",
+                  inputs: {
+                            length: 20
+                          }
+               }
+             ],
+  "hideideas": true
+});
+</script>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
