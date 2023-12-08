@@ -41,6 +41,7 @@ body, html {
 
 #Assets {background-color: black;}
 #Charts {background-color: black;}
+#BTC {background-color: black;}
 #Indices {background-color: black;}
 </style>
 </head>
@@ -70,6 +71,7 @@ background-color:black;
 
 <button class="tablink" onclick="openPage('Assets', this, 'black')"id="defaultOpen">Assets</button>
 <button class="tablink" onclick="openPage('Charts', this, 'black')">Charts</button>
+<button class="tablink" onclick="openPage('BTC', this, 'black')">BTC</button>
 <button class="tablink" onclick="location.href='https://www.malaysiastock.biz/Market-Watch.aspx?type=C&value=BURSA-INDICES'">Indices</button>
 
 <div id="Assets" class="tabcontent">
@@ -515,6 +517,72 @@ new TradingView.widget({
 			</tr>
 		</tbody>
 	</table>
+</div>
+
+
+<div id="BTC" class="tabcontent">
+<table style="width: 100%; height: 100%" >
+<tbody>
+<tr>
+    <td>
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": "BITSTAMP:BTCUSD",
+  "interval": "D",
+  "timezone": "Asia/Singapore",
+  "theme": "Dark",
+  "style": "0",
+  "locale": "en",
+  "toolbar_bg": "rgba(41, 47, 51, 1)",
+  "hide_top_toolbar": false,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "hideideas": true,
+  "show_popup_button": true,
+  "withdateranges": true,
+  "save_image": true,
+  "watchlist": [ 
+  "[BTC]",
+  "BITSTAMP:BTCUSD",
+  "[US STOCKS]",
+  "OANDA:US30USD",
+  "OANDA:SPX500USD",
+  "OANDA:NAS100USD",
+  "[BONDS]",
+  "OANDA:DE10YBEUR",
+  "OANDA:UK10YBGBP",
+  "[COMMODITIES]",
+  "TVC:USOIL",
+  "TVC:GOLD",
+  "[FX]",
+  "FX:NZDUSD",
+  "FX:AUDUSD",
+  "FX:USDJPY",
+  "FX:EURUSD",
+  "FX:GBPUSD",
+  "FX:USDCHF",
+  "FX:USDCAD",
+  "OANDA:XCUUSD",
+  "[EU STOCKS]",
+  "OANDA:DE30EUR",
+  "OANDA:EU50EUR",
+  "OANDA:UK100GBP",
+  "[APAC STOCKS]",
+  "OANDA:AU200AUD",
+  "OANDA:JP225USD",
+  "OANDA:CN50USD",
+  "OANDA:HK33HKD"
+  ],
+  "popup_width": "1000",
+  "popup_height": "650"
+});
+</script>
+    </td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <script>
